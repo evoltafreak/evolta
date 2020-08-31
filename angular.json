@@ -123,6 +123,171 @@
           }
         }
       }
-    }},
-  "defaultProject": "evolta"
+    },
+    "evolta-lib": {
+      "projectType": "library",
+      "root": "projects/evolta-lib",
+      "sourceRoot": "projects/evolta-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/evolta-lib/tsconfig.lib.json",
+            "project": "projects/evolta-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/evolta-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/evolta-lib/src/test.ts",
+            "tsConfig": "projects/evolta-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/evolta-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/evolta-lib/tsconfig.lib.json",
+              "projects/evolta-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "evolta-doc": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/evolta-doc",
+      "sourceRoot": "projects/evolta-doc/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/evolta-doc",
+            "index": "projects/evolta-doc/src/index.html",
+            "main": "projects/evolta-doc/src/main.ts",
+            "polyfills": "projects/evolta-doc/src/polyfills.ts",
+            "tsConfig": "projects/evolta-doc/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/evolta-doc/src/favicon.ico",
+              "projects/evolta-doc/src/assets"
+            ],
+            "styles": [
+              "projects/evolta-doc/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/evolta-doc/src/environments/environment.ts",
+                  "with": "projects/evolta-doc/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "evolta-doc:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "evolta-doc:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "evolta-doc:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/evolta-doc/src/test.ts",
+            "polyfills": "projects/evolta-doc/src/polyfills.ts",
+            "tsConfig": "projects/evolta-doc/tsconfig.spec.json",
+            "karmaConfig": "projects/evolta-doc/karma.conf.js",
+            "assets": [
+              "projects/evolta-doc/src/favicon.ico",
+              "projects/evolta-doc/src/assets"
+            ],
+            "styles": [
+              "projects/evolta-doc/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/evolta-doc/tsconfig.app.json",
+              "projects/evolta-doc/tsconfig.spec.json",
+              "projects/evolta-doc/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/evolta-doc/e2e/protractor.conf.js",
+            "devServerTarget": "evolta-doc:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "evolta-doc:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "evolta",
+  "cli": {
+    "analytics": "cbd1e723-e26b-46a0-a6c8-7c1add732a2c"
+  }
 }

@@ -12,6 +12,18 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/evolta-lib/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/evolta-lib/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/evolta-doc/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/evolta-doc/tsconfig.spec.json"
     }
 ]
 }
