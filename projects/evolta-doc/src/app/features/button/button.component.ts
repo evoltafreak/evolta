@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ButtonComponent implements OnInit {
 
   public isLoading: boolean;
+  public confirmed: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.save();
   }
 
   public save(): void {
@@ -20,6 +20,14 @@ export class ButtonComponent implements OnInit {
     setTimeout(() => {
       this.isLoading = false;
     }, 2000);
+  }
+
+  public confirm(): void {
+    this.confirmed = true;
+  }
+
+  public cancel(): void {
+    this.confirmed = false;
   }
 
 }

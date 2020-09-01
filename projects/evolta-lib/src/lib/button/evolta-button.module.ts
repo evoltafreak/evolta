@@ -5,25 +5,34 @@ import { SaveButtonTemplateComponent } from './save-button.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DeleteButtonDirective } from './delete-button.directive';
+import { MatDialogModule } from '@angular/material/dialog';
+import { YesNoDialogComponent } from './yes-no-dialog.component';
 
 @NgModule({
   declarations: [
     SaveButtonDirective,
-    SaveButtonTemplateComponent
+    SaveButtonTemplateComponent,
+    DeleteButtonDirective,
+    YesNoDialogComponent
   ],
   imports: [
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDialogModule
   ],
   exports: [
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule,
     MatProgressSpinnerModule,
+    MatDialogModule,
     SaveButtonDirective,
-    SaveButtonTemplateComponent
+    SaveButtonTemplateComponent,
+    DeleteButtonDirective,
+    YesNoDialogComponent
   ],
   providers: []
 })

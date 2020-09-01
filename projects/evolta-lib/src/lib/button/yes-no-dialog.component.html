@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{title}}</h1>
+<div mat-dialog-content>
+  <p>{{message}}</p>
+</div>
+<div mat-dialog-actions>
+  <div fxFlex></div>
+  <button mat-flat-button [mat-dialog-close] (click)="cancel()" color="warn">Nein</button>
+  <button mat-flat-button [mat-dialog-close] (click)="confirm()" cdkFocusInitial color="primary">Ja</button>
+</div>

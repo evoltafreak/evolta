@@ -1,1 +1,10 @@
-<button mat-raised-button evolta-button [isLoading]="isLoading" (click)="save()">Das ist ein Test</button>
+<div fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row">
+    <button mat-raised-button evolta-save-button [isLoading]="isLoading" (click)="save()">Save Button</button>
+  </div>
+  <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start center">
+    <button mat-raised-button evolta-delete-button (confirm)="confirm()" (cancel)="cancel()">Delete Button</button>
+    <div>Confirmed: {{confirmed}}</div>
+  </div>
+</div>
+

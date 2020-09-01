@@ -3,7 +3,7 @@ import {
   Directive,
   ElementRef,
   Input,
-  OnChanges, OnInit,
+  OnChanges,
   SimpleChanges,
   ViewContainerRef
 } from '@angular/core';
@@ -11,7 +11,7 @@ import { MatButton } from '@angular/material/button';
 import { SaveButtonTemplateComponent } from "./save-button.component";
 
 @Directive({
-  selector: 'button[evolta-button]'
+  selector: 'button[evolta-save-button]'
 })
 export class SaveButtonDirective implements OnChanges {
 
