@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './features/button/button.component';
-import { EvoltaButtonModule } from '../../../evolta-lib/src/lib/button/evolta-button.module';
+import { EvoltaButtonModule } from '../../../ng-evolta/src/lib/button/evolta-button.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';

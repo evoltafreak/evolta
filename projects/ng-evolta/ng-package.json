@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/evolta-lib",
+  "dest": "../../dist/ng-evolta",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

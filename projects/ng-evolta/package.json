@@ -1,5 +1,5 @@
 {
-  "name": "evolta-lib",
+  "name": "ng-evolta",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.0.14",

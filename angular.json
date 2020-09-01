@@ -124,38 +124,38 @@
         }
       }
     },
-    "evolta-lib": {
+    "ng-evolta": {
       "projectType": "library",
-      "root": "projects/evolta-lib",
-      "sourceRoot": "projects/evolta-lib/src",
+      "root": "projects/ng-evolta",
+      "sourceRoot": "projects/ng-evolta/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/evolta-lib/tsconfig.lib.json",
-            "project": "projects/evolta-lib/ng-package.json"
+            "tsConfig": "projects/ng-evolta/tsconfig.lib.json",
+            "project": "projects/ng-evolta/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/evolta-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-evolta/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/evolta-lib/src/test.ts",
-            "tsConfig": "projects/evolta-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/evolta-lib/karma.conf.js"
+            "main": "projects/ng-evolta/src/test.ts",
+            "tsConfig": "projects/ng-evolta/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-evolta/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/evolta-lib/tsconfig.lib.json",
-              "projects/evolta-lib/tsconfig.spec.json"
+              "projects/ng-evolta/tsconfig.lib.json",
+              "projects/ng-evolta/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "evolta-lib": [
-        "dist/evolta-lib/evolta-lib",
-        "dist/evolta-lib"
+      "ng-evolta": [
+        "dist/ng-evolta/ng-evolta",
+        "dist/ng-evolta"
       ]
     }
   }

@@ -14,10 +14,10 @@
       "path": "./tsconfig.spec.json"
     },
     {
-      "path": "./projects/evolta-lib/tsconfig.lib.json"
+      "path": "./projects/ng-evolta/tsconfig.lib.json"
     },
     {
-      "path": "./projects/evolta-lib/tsconfig.spec.json"
+      "path": "./projects/ng-evolta/tsconfig.spec.json"
     },
     {
       "path": "./projects/evolta-doc/tsconfig.app.json"

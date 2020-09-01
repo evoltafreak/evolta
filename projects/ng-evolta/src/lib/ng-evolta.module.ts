@@ -11,4 +11,4 @@ import { EvoltaButtonModule } from './button/evolta-button.module';
     EvoltaButtonModule
   ]
 })
-export class EvoltaLibModule { }
+export class NgEvoltaModule { }

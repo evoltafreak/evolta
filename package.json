@@ -8,10 +8,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "evolta-lib": "ng build --project evolta-lib",
-    "evolta-doc": "ng serve --project evolta-doc"
+    "ng-evolta": "ng build --project ng-evolta --prod",
+    "evolta-doc": "ng serve --project evolta-doc",
+    "publish.local": "cd dist/ng-evolta && npm publish --registry=http://localhost:4873",
+    "unpublish.local": "npm unpublish evolta --registry=http://localhost:4873/ --force"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~10.0.14",
     "@angular/cdk": "^10.1.3",
