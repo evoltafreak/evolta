@@ -11,7 +11,7 @@
     "ng-evolta": "ng build --project ng-evolta --prod",
     "evolta-doc": "ng serve --project evolta-doc",
     "publish.local": "cd dist/ng-evolta && npm publish --registry=http://localhost:4873",
-    "unpublish.local": "npm unpublish evolta --registry=http://localhost:4873/ --force"
+    "unpublish.local": "npm unpublish ng-evolta --registry=http://localhost:4873/ --force"
   },
   "private": false,
   "dependencies": {
