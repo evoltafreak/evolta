@@ -27,11 +27,7 @@ export class SaveButtonDirective implements OnChanges {
   public ngOnChanges(changes: SimpleChanges): void {
     if (changes.isLoading) {
       this.viewContainerRef.clear();
-      if (this.isLoading) {
-        this._createButtonTemplate(true);
-      } else {
-        this._createButtonTemplate(false);
-      }
+      this._createButtonTemplate(this.isLoading);
     }
   }
 
