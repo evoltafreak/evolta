@@ -17,14 +17,12 @@ import { YesNoDialogComponent } from './yes-no-dialog.component';
     YesNoDialogComponent
   ],
   imports: [
-    BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule,
     MatProgressSpinnerModule,
     MatDialogModule
   ],
   exports: [
-    BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule,
     MatProgressSpinnerModule,
